@@ -15,6 +15,8 @@ const char* host = "data.sparkfun.com";
 const char* publicKey   = "XG3a7JLA2xCox1DajOr3";
 const char* privateKey = "xxxxxxxxxxxxxxx";
 
+String vName = "gs"
+
 void setup() {
   Serial.begin(115200);
   delay(10);
@@ -68,7 +70,7 @@ void loop() {
   client.print("?private_key=");
   client.print(privateKey);
   client.print("&");
-  client.print("gs");
+  client.print(vName);
   client.print("=");
   client.print(value);
 
